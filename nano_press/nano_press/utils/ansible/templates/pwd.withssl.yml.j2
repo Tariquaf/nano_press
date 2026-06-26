@@ -137,7 +137,7 @@ services:
       - traefik.http.middlewares.prod-redirect.redirectscheme.scheme=https
       - traefik.http.routers.${ROUTER}-http.rule=Host(${SITES:?No sites set})
       - traefik.http.routers.${ROUTER}-http.entrypoints=http
-      - traefik.http.routers.${ROUTER}-http.middlewares=prod-redirect
+      # - traefik.http.routers.${ROUTER}-http.middlewares=prod-redirect  # Disabled: SSL terminated at external proxy, not Traefik
       - traefik.http.routers.${ROUTER}-https.rule=Host(${SITES})
       - traefik.http.routers.${ROUTER}-https.entrypoints=https
       - traefik.http.routers.${ROUTER}-https.tls=true

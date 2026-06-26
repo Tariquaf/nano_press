@@ -42,5 +42,9 @@
         - { key: "DB_PASSWORD", value: "{{ db_password }}" }
         - { key: "DB_ROOT_USERNAME", value: "{{ db_username }}" }
         - { key: "ROUTER", value: "{{ project_name }}" }
+        - { key: "DB_HOST", value: "db" }
+        - { key: "DB_PORT", value: "3306" }
+        - { key: "REDIS_CACHE", value: "redis://redis-cache:6379" }
+        - { key: "REDIS_QUEUE", value: "redis://redis-queue:6379" }
 
 
